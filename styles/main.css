@@ -92,6 +92,17 @@ img.next-image {
   color: #69778c;
 }
 
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) { 
+    
+    article.container {
+      max-width: 90% !important;
+    }
+
+}
+
 article.container {
   max-width: 70%;
 }

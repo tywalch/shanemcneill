@@ -19,6 +19,6 @@ export const useViewport = () => {
 
 export const useMobileOptions = () => {
   const { width } = useViewport();
-  const breakpoint = 620;
+  const breakpoint = 812;
   return width <= breakpoint;
 }
