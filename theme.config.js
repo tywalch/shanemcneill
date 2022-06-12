@@ -1,4 +1,6 @@
-const YEAR = new Date().getFullYear()
+import Image from 'next/image';
+
+const YEAR = new Date().getFullYear();
 
 export default {
   footer: (
@@ -16,6 +18,12 @@ export default {
         }
       `}</style>
     </small>
-    
   ),
+  logo: (
+    <Image
+      src="/images/shane-mcneill-videographer.png"
+      width={436}
+      height={100}
+    />
+  )
 }
