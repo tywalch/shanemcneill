@@ -59,9 +59,9 @@ h4 {
   color: white !important;
 }
 
-/* p, li, span {
-  color: #323232 !important;
-} */
+p, li, span {
+  color: white !important;
+}
 
 a {
   color: #009688 !important;
