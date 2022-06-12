@@ -20,6 +20,9 @@ export default function Nextra({ Component, pageProps }) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Sora:wght@600&display=swap" rel="stylesheet"/>
       </Head>
       <Component {...pageProps} />
     </>

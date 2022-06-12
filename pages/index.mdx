@@ -1,16 +1,53 @@
 ---
 type: page
-title: About
+title: Portfolio
 date: 2021-03-19
 ---
 
-# Your Name
+import Image from 'next/image';
+import Vimeo from '@u-wave/react-vimeo';
+import VideoCard from '../components/VideoCard';
 
-Hey, I'm a Senior Software Engineer at Company. I enjoy working with Next.js and crafting beautiful front-end experiences.
+# Shane McNeill
 
-This portfolio is built with **Next.js** and a library called [Nextra](https://nextra.vercel.app/). It allows you to write Markdown and focus on the _content_ of your portfolio.
+<Vimeo
+  video="716187981"
+  responsive
+  showTitle={false}
+  showPortrait={false}
+  showByline={false}
+  controls={false}
+/>
 
-[**Deploy your own**](https://vercel.com/new/git/external?repository-url=https://github.com/vercel-solutions/nextjs-portfolio-starter&project-name=portfolio&repository-name=portfolio) in a few minutes.
+---
+
+<VideoCard 
+  title="United PDX: Youth Development Academy"
+  description="One minute video for United PDX's Youth Development Academy (YDA).  This is the United PDX's top tier, high performance program with teams competing regionally and nationally.  Interviewed the YDA Directors, Jonathan Wilkins and Trevor Tharp."
+  video="717311576"
+  type="vimeo"
+/>
+
+<VideoCard 
+  title="United PDX: Competitive Academy"
+  description="A social media promo for the United PDX youth soccer club. The focus of this promo is on their Competitive Academy Director Justan Wolvert, where he explains the benefits of joining the soccer club."
+  video="717313414"
+  type="vimeo"
+/>
+
+<VideoCard 
+  title="Wild Diversity: Promo"
+  description="A 30 second social media promo for Wild Diversity telling the story of Rudy, a Mexican-American who speaks about his love of nature and what the outdoors mean to him."
+  video="716196018"
+  type="vimeo"
+/>
+
+<VideoCard 
+  title="Short Film: My Sweet Whiskey"
+  description="Worked as both a DP and Camera Operator on the short film My Sweet Whiskey. In this dark comedy, a brother and sister attempt to film a documentary about a pair of bank robbers leading up to their latest heist and the eventual bloody aftermath."
+  video="jDDkkI5PXcU"
+  type="youtube"
+/>
 
 ---
 

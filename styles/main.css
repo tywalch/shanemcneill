@@ -14,7 +14,12 @@
   font-named-instance: 'Italic';
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Sora:wght@600&display=swap');
+
 body {
+  /* color: #323232; */
+  /* background-color: #f9f6f6; */
+  background-color: #191919;
   font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -23,7 +28,7 @@ body {
     'cv03' 1, 'cv04' 1;
   font-variation-settings: 'wght' 450;
   font-variant: common-ligatures contextual;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02em; 
 }
 b,
 strong,
@@ -31,13 +36,32 @@ h3,
 h4,
 h5,
 h6 {
+  /* font-family: 'Lora', serif !important; */
+  /* color: #323232; */
   font-variation-settings: 'wght' 650;
 }
+
 h1 {
+  color: #009688 !important;
+  font-family: 'Sora', sans-serif;
+  text-transform: uppercase;
   font-variation-settings: 'wght' 850;
 }
+
 h2 {
+  /* font-family: 'Lora', serif !important; */
+  /* color: #323232; */
+  color: #009688 !important;
   font-variation-settings: 'wght' 750;
+}
+
+/* p, li, span {
+  color: #323232 !important;
+} */
+
+a {
+  color: #009688 !important;
+  text-decoration: underline !important;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
@@ -63,3 +87,18 @@ img.next-image {
 .nav-line .nav-link {
   color: #69778c;
 }
+
+article.container {
+  max-width: 70%;
+}
+
+.video-row {
+  display: grid; 
+  grid-template-columns: 1fr 60%; 
+  grid-template-rows: max-content; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "top-left top"; 
+}
+.video-row-top { grid-area: top; }
+.video-row-top-left { grid-area: top-left; }

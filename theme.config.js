@@ -2,9 +2,8 @@ const YEAR = new Date().getFullYear()
 
 export default {
   footer: (
-    <small style={{ display: 'block', marginTop: '8rem' }}>
-      <time>{YEAR}</time> © Your Name.
-      <a href="/feed.xml">RSS</a>
+    <small style={{ display: 'block', marginTop: '8rem', textAlign: 'center' }}>
+      <time>{YEAR}</time> © Shane McNeill
       <style jsx>{`
         a {
           float: right;
@@ -17,5 +16,7 @@ export default {
         }
       `}</style>
     </small>
-  )
+    
+  ),
+  darkMode: false,
 }
