@@ -1,11 +1,18 @@
 import Vimeo from '@u-wave/react-vimeo';
 import YouTube from 'react-youtube';
+import { useMobileOptions } from '../hooks/useViewport';
 
-const videoRowStyle = {
+const videoRowStyleDesktop = {
   display: "grid",
   gridTemplateColumns: "1fr 60%",
   gridTemplateRows: "max-content",
   gap: "0px 1em",
+  marginBottom: "3em"
+}
+
+const videoRowStyleMobile = {
+  display: "flex",
+  flexDirection: "column",
   marginBottom: "3em"
 }
 
@@ -42,7 +49,6 @@ const YoutubeVideo = ({video}) => {
 }
 
 function Video({type, video}) {
-  let component;
   if (type === "vimeo") {
     return <VimeoVideo video={video}/>
   } else {
@@ -51,6 +57,11 @@ function Video({type, video}) {
 }
 
 export default function VideoCard({title, description, video, type}) {
+  const isMobile = useMobileOptions();
+  const videoRowStyle = isMobile
+    ? videoRowStyleMobile
+    : videoRowStyleDesktop;
+  
   return (
     <div style={videoRowStyle}>
       <div>

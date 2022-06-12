@@ -55,6 +55,10 @@ h2 {
   font-variation-settings: 'wght' 750;
 }
 
+h4 {
+  color: white !important;
+}
+
 /* p, li, span {
   color: #323232 !important;
 } */
