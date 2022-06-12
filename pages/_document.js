@@ -4,7 +4,7 @@ export default function Document() {
   const meta = {
     title: 'Shane McNeill Videography',
     description: 'Sports, Events, Community',
-    image: 'https://shanemcneill.vercel.app/images/media.png'
+    image: ''
   }
 
   return (
