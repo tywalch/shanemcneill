@@ -1,4 +1,6 @@
-const experienceRowStyle = {
+import { useMobileOptions } from '../hooks/useViewport';
+
+const experienceRowDesktopStyle = {
   display: "grid",
   gridTemplateColumns: "1fr 60%",
   gridTemplateRows: "max-content",
@@ -6,7 +8,18 @@ const experienceRowStyle = {
   marginBottom: "3em"
 }
 
+const experienceRowMobileStyle = {
+  display: "flex",
+  flexDirection: "column",
+  marginBottom: "3em"
+}
+
 export default function ExperienceRow({title, company, description}) {
+  const isMobile = useMobileOptions();
+  const experienceRowStyle = isMobile
+    ? experienceRowMobileStyle
+    : experienceRowDesktopStyle;
+
   return (
     <div style={experienceRowStyle}>
       <div>
