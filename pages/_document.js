@@ -2,9 +2,9 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   const meta = {
-    title: 'Shane McNeill Videography',
-    description: 'Sports, Events, Community',
-    image: ''
+    title: 'Shane McNeill',
+    description: 'Shane McNeill is an ambitious videographer for Sports, Events, Community',
+    image: 'https://www.shanemcneill.media/images/media.png'
   }
 
   return (
