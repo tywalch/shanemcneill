@@ -23,7 +23,7 @@ const VimeoVideo = ({video}) => {
       showTitle={false}
       showPortrait={false}
       showByline={false}
-      controls={false}
+      controls={true}
       responsive
     />
   </div>

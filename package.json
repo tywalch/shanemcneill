@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "node ./scripts/gen-rss.js && next build",
-    "start": "next start"
+    "start": "next start",
+    "serve": "yarn build && yarn start"
   },
   "dependencies": {
     "@u-wave/react-vimeo": "^0.9.8",
@@ -16,6 +17,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-timeline-scribble": "^1.0.14",
+    "react-vimeo": "^2.0.0",
     "react-youtube": "^9.0.2",
     "rss": "^1.2.2"
   },
