@@ -6,22 +6,18 @@ date: 2021-03-19
 
 import Image from 'next/image';
 import Vimeo from '@u-wave/react-vimeo';
-import VideoCard from '../components/VideoCard';
+import VideoCard, { VerticalVideoCard, Video } from '../components/VideoCard';
 
 # Shane McNeill
 
-<Vimeo
+<Video
   video="785858745"
-  responsive
-  showTitle={false}
-  showPortrait={false}
-  showByline={false}
-  controls={true}
+  type="vimeo"
 />
 
 ---
 
-<VideoCard 
+<VerticalVideoCard 
   title="Portland Winterhawks 2023 Vertical Promo"
   description="This short social media promo shows off the sights and sounds of a typical Portland Winterhawks game night experience."
   video="790579757"
