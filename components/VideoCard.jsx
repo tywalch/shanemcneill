@@ -123,7 +123,7 @@ export function VerticalVideoCard({title, description, video, type}) {
         <Video type={type} video={video} vertical={true}/>
       </div>
       <div>
-        <h2 style={{marginTop: 0}}>{title}</h2>
+        <h2 style={isMobile ? {marginBottom: 0} : {marginTop: 0}}>{title}</h2>
         <p>{description}</p>
       </div>
     </div>
