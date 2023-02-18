@@ -7,17 +7,24 @@ const VIDEO_STYLES = {
   isPlaying: {
     boxShadow: "0px 0px 20px 0px #159688a8",
     transitionDuration: ".5s",
+    height: 'fit-content',
   },
   isNotPlaying: {
     boxShadow: "0px 0px 20px 0px black",
     transitionDuration: "1s",
+    height: 'fit-content',
   }
 };
 
 const VimeoVideo = ({video, vertical}) => {
   const [isPlaying, setIsPlaying]  = useState(false);
+  const [isLoaded, setIsLoaded]  = useState(false);
+  let style = undefined;
+  if (isLoaded) {
+    style = isPlaying ? VIDEO_STYLES.isPlaying : VIDEO_STYLES.isNotPlaying;
+  }
   return (
-    <div style={ isPlaying ? VIDEO_STYLES.isPlaying : VIDEO_STYLES.isNotPlaying }>
+    <div style={ style }>
       <Vimeo
         video={video}
         showTitle={false}
@@ -28,6 +35,9 @@ const VimeoVideo = ({video, vertical}) => {
         responsive={!vertical}
         onPlaying={() => {
           setIsPlaying(true);
+        }}
+        onLoaded={() => {
+          setIsLoaded(true);
         }}
         onPause={() => {
           setIsPlaying(false);
@@ -40,7 +50,7 @@ const VimeoVideo = ({video, vertical}) => {
 const YoutubeVideo = ({video}) => {
   const [isPlaying, setIsPlaying]  = useState(false);
   const style = isPlaying ? VIDEO_STYLES.isPlaying : VIDEO_STYLES.isNotPlaying;
-  return <div style={{...style, height: "auto"}}>
+  return <div style={{ ...style, height: "auto" }}>
     <YouTube
       onPause={() => {
         setIsPlaying(false);
