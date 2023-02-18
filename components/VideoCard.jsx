@@ -24,7 +24,7 @@ const VimeoVideo = ({video, vertical}) => {
         showPortrait={false}
         showByline={false}
         controls={true}
-        height={vertical ? 450 : undefined}
+        height={vertical ? 550 : undefined}
         responsive={!vertical}
         onPlaying={() => {
           setIsPlaying(true);
